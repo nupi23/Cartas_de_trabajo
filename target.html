@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TARGETAS PROFESIONALES</title>
+    <link rel="stylesheet" href="static/estar.css">
+<body>
+    <h1>TARGETAS PROFESIONALES</h1>
+    {%block target%}
+    <div class="card">
+    <p>{{nombre}}</p>
+    <p>{{sobrenombre}}</p>
+    <h2>HOBBIES:</h2>
+    <ul>
+        {%for hobby in hobbies%}
+        <li>{{hobby}}</li>
+        {%endfor%}
+    </ul>
+    <h2>SOY BUENO:</h2>
+    <ul>
+        {%for cap in caps%}
+        <li>{{cap}}</li>
+        {%endfor%}
+    </ul>
+
+    
+    {%endblock%}
+    <span>¿Quieres diseñar tu propia tarjeta?</span>
+    <a href="{{ url_for('nuevo') }}" class="main__link">Diseñala ahora</a>
+</div>
+</body>
+
+</html>

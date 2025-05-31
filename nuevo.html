@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="static/estar.css">
+</head>
+<body>
+    <div class="card">
+    <h1>Diseña tu tarjeta</h1>
+    <form method="POST" action="{{ url_for('tarjeta') }}">
+        <label for="nombre">Nombre completo:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="sobrenombre">Apodo (si tienes)(Entre dobles comillas):</label><br>
+        <input type="text" id="sobrenombre" name="sobrenombre"><br><br>
+        <label for="hobbies">Hobbies (separados por comas):</label><br>
+        <input type="text" id="hobbies" name="hobbies" required><br><br>
+        <label for="caps">Destrezas/capacidades (separados por comas):</label><br>
+        <textarea id="caps" name="caps" rows="4" cols="40" required></textarea><br><br>
+        <input type="submit" value="Crear tarjeta">
+    </form>
+    </div>
+</body>
+</html>
